@@ -1,0 +1,147 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    background: #000000;
+    color: #ffffff;
+  }
+  
+  /* Content Styles */
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  /* Button Styles */
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .buttons button {
+    border: none;
+    background: transparent;
+    color: #00ffff;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+    clip-path: polygon(0% 15%, 15% 15%, 25% 0%, 85% 0%, 85% 85%, 25% 85%, 15% 100%, 0% 100%);
+  }
+  
+  .buttons button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+  }
+  
+  .join {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+  }
+  
+  .create-btn {
+    width: 100%;
+  }
+  
+  /* Message Box Styles */
+  .message-box {
+    border-color: #00ffff;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #000000, #001a1a, #003333);
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    align-items: stretch;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+  }
+  
+  .message-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to right, #00ff00, #0000ff, #ff00ff);
+  }
+  
+  .messages {
+    overflow-y: scroll;
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .inputs {
+    padding: 10px;
+    display: flex;
+    background: linear-gradient(to right, #000000, #001a1a);
+  }
+  
+  #message {
+    flex: 1;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #00ffff;
+    color: #00ffff;
+    font-size: 16px;
+    padding: 10px;
+    outline: none;
+  }
+  
+  #message::placeholder {
+    color: #00cccc;
+  }
+  
+  /* Text Styles */
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00cccc, 0 0 20px #00cccc;
+    animation: neonGlow 2s infinite;
+  }
+  
+  .text {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start; /* Changed from space-between */
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .muted {
+    font-size: 10px;
+    color: #00cccc;
+    align-self: flex-end;
+    margin-left: 10px; /* Added margin to move timestamp to the left */
+  }
+  
+  /* Animations */
+  @keyframes neonGlow {
+    0% {
+      text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00cccc, 0 0 20px #00cccc;
+    }
+    50% {
+      text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00cccc, 0 0 40px #00cccc;
+    }
+    100% {
+      text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00cccc, 0 0 20px #00cccc;
+    }
+  }
